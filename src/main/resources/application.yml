@@ -1,0 +1,42 @@
+server:
+  port: 8086
+spring:
+  #通用的数据源配置
+  datasource: # 数据源的相关配置
+    type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
+    driver-class-name: com.mysql.cj.jdbc.Driver         # mysql驱动
+    url: jdbc:mysql://192.168.43.200:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345678
+    hikari:
+      connection-timeout: 60000       # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 默认:30秒
+      minimum-idle: 5                 # 最小连接数
+      maximum-pool-size: 100           # 最大连接数
+      auto-commit: true               # 自动提交
+      idle-timeout: 600000            # 连接超时的最大时长（毫秒），超时则被释放（retired），默认:10分钟
+      pool-name: DateSourceHikariCP     # 连接池名字
+      max-lifetime: 30000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
+      connection-test-query: SELECT 1
+
+  jpa:
+    #这个参数是在建表的时候，将默认的存储引擎切换为 InnoDB 用的
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    #配置在日志中打印出执行的 SQL 语句信息。
+    show-sql: true
+    hibernate:
+      #配置指明在程序启动的时候要删除并且创建实体类对应的表
+      ddl-auto: none
+#    properties:
+#      hirernate:
+#        generate_statistics: true
+#        jdbc:
+#          batch_size: 500
+#        order_inserts: true
+#        order_updates: true
+
+  servlet:
+    multipart:
+      max-file-size: 512000     # 文件上传大小限制为500kb
+      max-request-size: 512000  # 请求大小限制为500kb
+    main:
+      allow-bean-definition-overriding: true
