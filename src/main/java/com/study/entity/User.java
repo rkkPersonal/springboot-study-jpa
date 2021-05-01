@@ -13,6 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString
 //@NamedQuery(name="User.findByPassword",query = "select c from User c where c.password = ?1")
 
 public class User {

@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.Future;
 
 @SpringBootTest(classes = Application.class)
 @RunWith(SpringRunner.class)
@@ -29,6 +30,12 @@ class ApplicationTests {
 
     @Autowired
     private UserRoleRepository userRoleRepository;
+
+    @Test
+    public void testAsync(){
+        Future<User> steven = respository.findUserByUsername("steven");
+
+    }
 
     @Test
     public void testBachInsert(){
