@@ -13,7 +13,7 @@ public class Role {
     private int id;
     private String roleName;
 
-    private Set<User> userList= new HashSet<>();
+    private Set<User> userList = new HashSet<>();
 
     @ManyToMany(mappedBy = "userRoleList")
     public Set<User> getUserList() {

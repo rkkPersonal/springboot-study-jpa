@@ -10,7 +10,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "user_role")
 public class UserRole {
-   // private int id;
+    // private int id;
     @Id
     @Column(name = "user_id")
     private int userId;

@@ -32,16 +32,16 @@ class ApplicationTests {
     private UserRoleRepository userRoleRepository;
 
     @Test
-    public void testAsync(){
+    public void testAsync() {
         Future<User> steven = respository.findUserByUsername("steven");
 
     }
 
     @Test
-    public void testBachInsert(){
+    public void testBachInsert() {
 
         System.out.println(System.currentTimeMillis());
-        List<UserRole> userRoleList=new ArrayList<>();
+        List<UserRole> userRoleList = new ArrayList<>();
         for (int i = 0; i < 10000; i++) {
             UserRole userRole = new UserRole();
             userRole.setRoleId(new Random().nextInt(3));
@@ -81,12 +81,10 @@ class ApplicationTests {
         ));
 
 
-
-
     }
 
     public static void main(String[] args) {
-      long l=  1619575872153L-1619575871604L;
+        long l = 1619575872153L - 1619575871604L;
         System.out.println(l);
     }
 }

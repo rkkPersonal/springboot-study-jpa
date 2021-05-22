@@ -27,7 +27,7 @@ public class User {
     private String updateBy;
 
 
-    private Set<Role> userRoleList= new HashSet<>();
+    private Set<Role> userRoleList = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id")

@@ -1,42 +1,42 @@
 server:
   port: 8086
 spring:
-  #Í¨ÓÃµÄÊý¾ÝÔ´ÅäÖÃ
-  datasource: # Êý¾ÝÔ´µÄÏà¹ØÅäÖÃ
-    type: com.zaxxer.hikari.HikariDataSource          # Êý¾ÝÔ´ÀàÐÍ£ºHikariCP
-    driver-class-name: com.mysql.cj.jdbc.Driver         # mysqlÇý¶¯
+  #Í¨ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
+  datasource: # ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    type: com.zaxxer.hikari.HikariDataSource          # ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Í£ï¿½HikariCP
+    driver-class-name: com.mysql.cj.jdbc.Driver         # mysqlï¿½ï¿½ï¿½ï¿½
     url: jdbc:mysql://192.168.43.200:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 12345678
     hikari:
-      connection-timeout: 60000       # µÈ´ýÁ¬½Ó³Ø·ÖÅäÁ¬½ÓµÄ×î´óÊ±³¤£¨ºÁÃë£©£¬³¬¹ýÕâ¸öÊ±³¤»¹Ã»¿ÉÓÃµÄÁ¬½ÓÔò·¢ÉúSQLException£¬ Ä¬ÈÏ:30Ãë
-      minimum-idle: 5                 # ×îÐ¡Á¬½ÓÊý
-      maximum-pool-size: 100           # ×î´óÁ¬½ÓÊý
-      auto-commit: true               # ×Ô¶¯Ìá½»
-      idle-timeout: 600000            # Á¬½Ó³¬Ê±µÄ×î´óÊ±³¤£¨ºÁÃë£©£¬³¬Ê±Ôò±»ÊÍ·Å£¨retired£©£¬Ä¬ÈÏ:10·ÖÖÓ
-      pool-name: DateSourceHikariCP     # Á¬½Ó³ØÃû×Ö
-      max-lifetime: 30000           # Á¬½ÓµÄÉúÃüÊ±³¤£¨ºÁÃë£©£¬³¬Ê±¶øÇÒÃ»±»Ê¹ÓÃÔò±»ÊÍ·Å£¨retired£©£¬Ä¬ÈÏ:30·ÖÖÓ 1800000ms
+      connection-timeout: 60000       # ï¿½È´ï¿½ï¿½ï¿½ï¿½Ó³Ø·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SQLExceptionï¿½ï¿½ Ä¬ï¿½ï¿½:30ï¿½ï¿½
+      minimum-idle: 5                 # ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+      maximum-pool-size: 100           # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+      auto-commit: true               # ï¿½Ô¶ï¿½ï¿½á½»
+      idle-timeout: 600000            # ï¿½ï¿½ï¿½Ó³ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Í·Å£ï¿½retiredï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½:10ï¿½ï¿½ï¿½ï¿½
+      pool-name: DateSourceHikariCP     # ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
+      max-lifetime: 30000           # ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Í·Å£ï¿½retiredï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½:30ï¿½ï¿½ï¿½ï¿½ 1800000ms
       connection-test-query: SELECT 1
 
   jpa:
-    #Õâ¸ö²ÎÊýÊÇÔÚ½¨±íµÄÊ±ºò£¬½«Ä¬ÈÏµÄ´æ´¢ÒýÇæÇÐ»»Îª InnoDB ÓÃµÄ
+    #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ò£¬½ï¿½Ä¬ï¿½ÏµÄ´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½Îª InnoDB ï¿½Ãµï¿½
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    #ÅäÖÃÔÚÈÕÖ¾ÖÐ´òÓ¡³öÖ´ÐÐµÄ SQL Óï¾äÐÅÏ¢¡£
+    #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ð´ï¿½Ó¡ï¿½ï¿½Ö´ï¿½Ðµï¿½ SQL ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
     show-sql: true
     hibernate:
-      #ÅäÖÃÖ¸Ã÷ÔÚ³ÌÐòÆô¶¯µÄÊ±ºòÒªÉ¾³ý²¢ÇÒ´´½¨ÊµÌåÀà¶ÔÓ¦µÄ±í
+      #ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò´ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä±ï¿½
       ddl-auto: none
-#    properties:
-#      hirernate:
-#        generate_statistics: true
-#        jdbc:
-#          batch_size: 500
-#        order_inserts: true
-#        order_updates: true
+  #    properties:
+  #      hirernate:
+  #        generate_statistics: true
+  #        jdbc:
+  #          batch_size: 500
+  #        order_inserts: true
+  #        order_updates: true
 
   servlet:
     multipart:
-      max-file-size: 512000     # ÎÄ¼þÉÏ´«´óÐ¡ÏÞÖÆÎª500kb
-      max-request-size: 512000  # ÇëÇó´óÐ¡ÏÞÖÆÎª500kb
+      max-file-size: 512000     # ï¿½Ä¼ï¿½ï¿½Ï´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Îª500kb
+      max-request-size: 512000  # ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Îª500kb
     main:
       allow-bean-definition-overriding: true
