@@ -34,6 +34,7 @@ spring:
   #        order_inserts: true
   #        order_updates: true
 
+
   servlet:
     multipart:
       max-file-size: 512000     # �ļ��ϴ���С����Ϊ500kb
