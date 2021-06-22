@@ -41,3 +41,5 @@ spring:
       max-request-size: 512000  # �����С����Ϊ500kb
     main:
       allow-bean-definition-overriding: true
+  application:
+    name: jpa-study
